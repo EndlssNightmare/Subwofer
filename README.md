@@ -1,4 +1,4 @@
-# subwofer
+# Subwofer
 
 Subdomain enumeration pipeline. Runs passive sources, DNS bruteforce, permutations, resolving, and HTTP probing in sequence.
 
