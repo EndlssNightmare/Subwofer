@@ -55,6 +55,50 @@ go build -o subwofer .
 | `-perm-max` | Cap permutation base size (default: 300, 0 = unlimited) |
 | `-v` | Verbose output |
 
+## Tools
+
+### Passive Enumeration
+
+| Tool | Source | API Key |
+|------|--------|---------|
+| subfinder | projectdiscovery | `PDCP_KEY` (optional, enables `-all`) |
+| amass | owasp-amass | — |
+| findomain | Findomain | — |
+| assetfinder | tomnomnom | — |
+| chaos | projectdiscovery | `PDCP_KEY` (required) |
+| github-subdomains | gwen001 | `GITHUB_TOKEN` (required) |
+| crtsh | crt.sh API (HTTP) | — |
+| waybackurls | tomnomnom | — |
+| gau | lc | — |
+| haktrails | hakluke | `PDCP_KEY` (required) |
+| shodan | shodan CLI | `SHODAN_KEY` (required) |
+| bevigil-cli | bevigil-osint | `BEVIGIL_KEY` (required) |
+
+### Bruteforce
+
+| Tool | Notes |
+|------|-------|
+| puredns | preferred |
+| shuffledns | fallback if puredns not installed |
+
+### Permutation & Alteration
+
+| Tool | Notes |
+|------|-------|
+| alterx | default, pattern-based |
+| gotator | `--perm-full` only |
+| altdns | `--perm-full` only |
+| dnsx | used to resolve permutation candidates (optional) |
+
+### Resolution, Probing & Extras
+
+| Tool | Phase |
+|------|-------|
+| dnsx | DNS resolution |
+| httpx | HTTP probing |
+| gowitness | Screenshots (`-s`) |
+| ffuf | Virtual host discovery (`--vhost`) |
+
 ## API Keys
 
 Set via environment variables. All optional.
