@@ -1,0 +1,4 @@
+subwofer
+results/
+*.txt
+!install.sh
